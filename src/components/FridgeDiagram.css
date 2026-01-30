@@ -1,0 +1,225 @@
+/* === Fridge Diagram Container === */
+.fridge-diagram-container {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.fridge-main-layout {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === 3D Canvas Wrapper === */
+.fridge-canvas-wrapper {
+  flex: 0 0 auto;
+  width: 420px;
+  height: 560px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--svg-chip-bg-start);
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.fridge-canvas-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+/* === 3D HTML Labels === */
+.temp-label-3d {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--svg-fridge-temp-text);
+  background: var(--svg-fridge-temp-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+}
+
+.component-label-3d {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--svg-label-text);
+  background: var(--svg-label-bg);
+  border: 1px solid var(--svg-label-stroke);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.component-label-3d:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.component-label-3d.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  border-width: 1.5px;
+}
+
+/* === Detail Panel === */
+.fridge-detail-panel {
+  flex: 0 0 380px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Temperature Badge === */
+.temperature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--svg-fridge-temp-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--svg-fridge-temp-text);
+  margin-bottom: 16px;
+}
+
+.temperature-badge .temp-label {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.temperature-badge .temp-value {
+  color: var(--accent);
+}
+
+/* === Drill-Down CTA === */
+.drill-down-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.drill-down-cta:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.drill-down-cta:active {
+  transform: translateY(0);
+}
+
+.drill-down-cta .cta-arrow {
+  font-size: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.drill-down-cta:hover .cta-arrow {
+  transform: translateX(2px);
+}
+
+/* === Rotate Hint Overlay === */
+.fridge-rotate-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.85;
+  animation: hintFade 4s ease-out forwards;
+}
+
+.fridge-rotate-hint svg {
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+@keyframes hintFade {
+  0%, 70% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+
+/* === Responsive === */
+@media (max-width: 1000px) {
+  .fridge-main-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fridge-canvas-wrapper {
+    width: 100%;
+    max-width: 420px;
+    height: 480px;
+  }
+
+  .fridge-detail-panel {
+    width: 100%;
+    max-width: 520px;
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .fridge-diagram-container {
+    padding: 16px;
+  }
+
+  .fridge-canvas-wrapper {
+    height: 400px;
+  }
+
+  .fridge-detail-panel {
+    flex: none;
+  }
+}

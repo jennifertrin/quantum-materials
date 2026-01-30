@@ -1,0 +1,248 @@
+:root {
+  --bg-primary: #0d0f11;
+  --bg-elevated: #141618;
+  --bg-surface: #1a1d20;
+  --bg-hover: #1f2225;
+
+  --border: #252830;
+  --border-subtle: #1e2126;
+
+  --text-primary: #d4d4d8;
+  --text-secondary: #82858c;
+  --text-tertiary: #52555c;
+  --text-heading: #e8e8ec;
+
+  --accent: #c8956c;
+  --accent-muted: rgba(200, 149, 108, 0.15);
+  --accent-dim: #8b6a4e;
+
+  --data-1: #6b8fa3;
+  --data-2: #a3856b;
+  --data-3: #7a9b6b;
+  --data-4: #9b6b7a;
+  --data-5: #6b7a9b;
+  --data-6: #8c8c78;
+  --data-7: #9b8a6b;
+  --data-8: #6b9b8a;
+  --data-9: #7b6b9b;
+  --data-10: #9b7b6b;
+
+  /* SVG / QPU diagram */
+  --svg-chip-bg-start: #08090b;
+  --svg-chip-bg-end: #0d0f11;
+  --svg-package-start: #1a1c22;
+  --svg-package-end: #252830;
+  --svg-die-start: #181b20;
+  --svg-die-mid1: #1e2228;
+  --svg-die-mid2: #22262e;
+  --svg-die-end: #1a1e24;
+  --svg-bevel-start: #2a2d35;
+  --svg-bevel-end: #1e2126;
+  --svg-qubit-start: #4a5568;
+  --svg-qubit-end: #3a4250;
+  --svg-qubit-hover-start: #5a6578;
+  --svg-qubit-hover-end: #4a5568;
+  --svg-control-start: #4a6b7a;
+  --svg-control-end: #3a5565;
+  --svg-resonator-start: #5a7a5a;
+  --svg-resonator-end: #4a6a4a;
+  --svg-pad-start: #8b6a4e;
+  --svg-pad-end: #6e5340;
+  --svg-bond-start: #c8956c;
+  --svg-bond-end: #a07850;
+  --svg-grid-pattern: #ffffff06;
+  --svg-stroke-package: #2a2d35;
+  --svg-stroke-bevel: #2e3138;
+  --svg-stroke-die: #2e3138;
+  --svg-stroke-alignment: #3a3e48;
+  --svg-stroke-pin: #4a3828;
+  --svg-stroke-control: #2a4050;
+  --svg-stroke-resonator: #2a4a2a;
+  --svg-stroke-qubit-array: #2a2d35;
+  --svg-stroke-qubit: #4a5568;
+  --svg-stroke-coupling: #4a5568;
+  --svg-qubit-array-bg: #12151a;
+  --svg-qubit-jj: #8b6a4e;
+  --svg-trace-control: #5a7a8a;
+  --svg-trace-resonator: #6a8a6a;
+  --svg-trace-bus-h: #4a5a6a;
+  --svg-trace-bus-v: #4a6a4a;
+  --svg-label-bg: #141618;
+  --svg-label-stroke: #52555c;
+  --svg-label-text: #d4d4d8;
+  --svg-legend-qubit: #4a5568;
+  --svg-legend-control: #4a6b7a;
+  --svg-legend-resonator: #5a7a5a;
+  --svg-legend-io: #8b6a4e;
+  --svg-legend-substrate: #1a1d20;
+  --svg-legend-shielding: #252830;
+
+  /* SVG / Fridge diagram */
+  --svg-fridge-shell-start: #1e2126;
+  --svg-fridge-shell-end: #252830;
+  --svg-fridge-stage-copper: #8b6a4e;
+  --svg-fridge-stage-copper-dim: #6e5340;
+  --svg-fridge-coolant: #4a6b7a;
+  --svg-fridge-coolant-dim: #3a5565;
+  --svg-fridge-wiring-rf: #5a7a8a;
+  --svg-fridge-wiring-dc: #c8956c;
+  --svg-fridge-wiring-sc: #5a7a5a;
+  --svg-fridge-temp-bg: #141618;
+  --svg-fridge-temp-text: #82858c;
+  --svg-fridge-qpu-glow: rgba(200,149,108,0.3);
+
+  /* Chart */
+  --chart-pie-stroke: #141618;
+  --chart-pie-center: #141618;
+  --chart-pie-label: #52555c;
+  --chart-pie-value: #d4d4d8;
+  --chart-bar-text: #fff;
+
+  /* Map */
+  --map-bg: #0a0c10;
+  --map-country-fill: #181c22;
+  --map-country-stroke: #252830;
+  --map-grid: #4a5060;
+
+  /* Popup */
+  --shadow-popup: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'DM Mono', 'SF Mono', 'Consolas', monospace;
+
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+/* ===== Light mode ===== */
+[data-theme="light"] {
+  --bg-primary: #f5f3f0;
+  --bg-elevated: #ffffff;
+  --bg-surface: #f0eeeb;
+  --bg-hover: #e8e5e1;
+
+  --border: #d6d3ce;
+  --border-subtle: #e2dfda;
+
+  --text-primary: #2c2a28;
+  --text-secondary: #6b6862;
+  --text-tertiary: #9c9890;
+  --text-heading: #1a1816;
+
+  --accent: #a06832;
+  --accent-muted: rgba(160, 104, 50, 0.12);
+  --accent-dim: #7a5028;
+
+  --data-1: #4a7a90;
+  --data-2: #8a6a4a;
+  --data-3: #5a8050;
+  --data-4: #804a60;
+  --data-5: #4a5a85;
+  --data-6: #6e6e5a;
+  --data-7: #806a4a;
+  --data-8: #4a806a;
+  --data-9: #604a80;
+  --data-10: #805a4a;
+
+  /* SVG / QPU diagram */
+  --svg-chip-bg-start: #e8e5e1;
+  --svg-chip-bg-end: #f0eeeb;
+  --svg-package-start: #d6d3ce;
+  --svg-package-end: #c8c5c0;
+  --svg-die-start: #e2dfda;
+  --svg-die-mid1: #dddad5;
+  --svg-die-mid2: #d8d5d0;
+  --svg-die-end: #e0ddd8;
+  --svg-bevel-start: #ccc9c4;
+  --svg-bevel-end: #d6d3ce;
+  --svg-qubit-start: #b0aaa0;
+  --svg-qubit-end: #c0bab0;
+  --svg-qubit-hover-start: #a09a90;
+  --svg-qubit-hover-end: #b0aaa0;
+  --svg-control-start: #7a9aaa;
+  --svg-control-end: #8aaabb;
+  --svg-resonator-start: #7aa07a;
+  --svg-resonator-end: #8ab08a;
+  --svg-pad-start: #a07840;
+  --svg-pad-end: #b08850;
+  --svg-bond-start: #a06832;
+  --svg-bond-end: #b88050;
+  --svg-grid-pattern: #00000008;
+  --svg-stroke-package: #c0bdb8;
+  --svg-stroke-bevel: #c8c5c0;
+  --svg-stroke-die: #c8c5c0;
+  --svg-stroke-alignment: #c0bdb8;
+  --svg-stroke-pin: #b08850;
+  --svg-stroke-control: #8aaabb;
+  --svg-stroke-resonator: #8ab08a;
+  --svg-stroke-qubit-array: #c8c5c0;
+  --svg-stroke-qubit: #b0aaa0;
+  --svg-stroke-coupling: #c0bab0;
+  --svg-qubit-array-bg: #e8e5e1;
+  --svg-qubit-jj: #a07840;
+  --svg-trace-control: #7a9aaa;
+  --svg-trace-resonator: #7aa07a;
+  --svg-trace-bus-h: #8a9aaa;
+  --svg-trace-bus-v: #7aa07a;
+  --svg-label-bg: #ffffff;
+  --svg-label-stroke: #9c9890;
+  --svg-label-text: #2c2a28;
+  --svg-legend-qubit: #b0aaa0;
+  --svg-legend-control: #7a9aaa;
+  --svg-legend-resonator: #7aa07a;
+  --svg-legend-io: #a07840;
+  --svg-legend-substrate: #e2dfda;
+  --svg-legend-shielding: #d6d3ce;
+
+  /* SVG / Fridge diagram */
+  --svg-fridge-shell-start: #d6d3ce;
+  --svg-fridge-shell-end: #c8c5c0;
+  --svg-fridge-stage-copper: #a07840;
+  --svg-fridge-stage-copper-dim: #b08850;
+  --svg-fridge-coolant: #7a9aaa;
+  --svg-fridge-coolant-dim: #8aaabb;
+  --svg-fridge-wiring-rf: #7a9aaa;
+  --svg-fridge-wiring-dc: #a06832;
+  --svg-fridge-wiring-sc: #7aa07a;
+  --svg-fridge-temp-bg: #ffffff;
+  --svg-fridge-temp-text: #6b6862;
+  --svg-fridge-qpu-glow: rgba(160,104,50,0.2);
+
+  /* Chart */
+  --chart-pie-stroke: #ffffff;
+  --chart-pie-center: #ffffff;
+  --chart-pie-label: #9c9890;
+  --chart-pie-value: #2c2a28;
+  --chart-bar-text: #fff;
+
+  /* Map */
+  --map-bg: #e8e5e1;
+  --map-country-fill: #d6d3ce;
+  --map-country-stroke: #c8c5c0;
+  --map-grid: #b0aaa0;
+
+  /* Popup */
+  --shadow-popup: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  min-height: 100vh;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-muted);
+  color: var(--text-heading);
+}

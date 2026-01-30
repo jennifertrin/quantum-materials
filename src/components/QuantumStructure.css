@@ -1,0 +1,50 @@
+/* === View toggle tabs === */
+.structure-tabs {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.structure-tab {
+  padding: 9px 22px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  position: relative;
+}
+
+.structure-tab + .structure-tab {
+  border-left: 1px solid var(--border);
+}
+
+.structure-tab.active {
+  background: var(--accent-muted);
+  color: var(--accent);
+}
+
+.structure-tab:hover:not(.active) {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+/* === View transition === */
+.structure-view {
+  animation: structureFadeIn 0.3s ease-out;
+}
+
+@keyframes structureFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

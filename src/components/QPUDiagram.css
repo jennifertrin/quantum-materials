@@ -1,0 +1,440 @@
+/* === QPU Diagram Container === */
+.qpu-diagram-container {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.qpu-main-layout {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === 3D Tilt Wrapper === */
+.chip-3d-wrapper {
+  flex: 0 0 auto;
+  width: 520px;
+  transform-style: preserve-3d;
+  cursor: grab;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.chip-3d-wrapper:active {
+  cursor: grabbing;
+}
+
+/* === SVG Chip === */
+.qpu-chip-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  background: var(--svg-chip-bg-start);
+  border: 1px solid var(--border);
+}
+
+.chip-component {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.chip-component:hover {
+  opacity: 0.85;
+}
+
+.chip-component.selected {
+  /* no pulsing animation — just let the stroke change handle it */
+}
+
+/* === Numbered component labels === */
+.component-label {
+  cursor: pointer;
+}
+
+.component-label:hover circle {
+  stroke: #c8956c;
+}
+
+.component-label:hover text {
+  fill: #c8956c;
+}
+
+/* === Detail Panel === */
+.qpu-detail-panel {
+  flex: 0 0 380px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.component-detail,
+.material-detail {
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.component-detail.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.placeholder-icon {
+  color: var(--text-tertiary);
+  opacity: 0.4;
+}
+
+.placeholder-text {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  max-width: 260px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === Legend in placeholder === */
+.component-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.legend-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* === Detail panel header === */
+.component-detail.active,
+.material-detail.active {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+
+.detail-header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  flex: 1;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+.close-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.close-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+/* === Description text === */
+.detail-description {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+}
+
+/* === Material stats boxes === */
+.material-stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-weight: 300;
+}
+
+/* === Section labels === */
+.materials-section,
+.subcomponents-section,
+.source-section {
+  margin-bottom: 20px;
+}
+
+.materials-section h4,
+.subcomponents-section h4,
+.source-section h4 {
+  color: var(--text-tertiary);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 10px 0;
+  font-family: var(--font-mono);
+}
+
+/* === Material tags === */
+.material-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.material-tag {
+  background: var(--accent-muted);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.material-tag.clickable {
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.material-tag.clickable:hover {
+  background: rgba(200, 149, 108, 0.25);
+  border-color: var(--accent-dim);
+}
+
+.mat-percent {
+  opacity: 0.6;
+  font-size: 0.6875rem;
+  font-weight: 300;
+}
+
+/* === Subcomponent list === */
+.subcomponent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subcomponent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease;
+}
+
+.subcomponent-item.clickable {
+  cursor: pointer;
+}
+
+.subcomponent-item.clickable:hover {
+  background: var(--bg-hover);
+}
+
+.sub-name {
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+}
+
+.sub-material {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 400;
+}
+
+/* === World Map in detail panel === */
+.source-section .world-map-container {
+  margin-bottom: 14px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.country-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.country-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
+}
+
+.country-row .country-name {
+  width: 90px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+.share-bar-container {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.share-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.share-value {
+  width: 40px;
+  text-align: right;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+/* === Responsive === */
+@media (max-width: 1000px) {
+  .qpu-main-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chip-3d-wrapper {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .qpu-detail-panel {
+    width: 100%;
+    max-width: 520px;
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .qpu-diagram-container {
+    padding: 16px;
+  }
+
+  .qpu-detail-panel {
+    flex: none;
+  }
+
+  .material-stats {
+    flex-direction: column;
+  }
+}
