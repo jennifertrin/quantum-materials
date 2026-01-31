@@ -6,6 +6,10 @@ An interactive web application exploring the essential materials used in superco
 
 ## Features
 
+### Raw Materials Cost
+
+Estimated cost breakdown of raw commodity materials in a quantum computer. Displays a total cost figure with a collapsible per-material table sorted by cost. Includes context noting that raw materials are a small fraction of a full system's $10M–$50M+ price tag.
+
 ### Dilution Refrigerator Visualization
 
 Interactive 3D model of a dilution refrigerator built with Three.js. Click any of the six cooling stages (from 300 K room-temperature electronics down to the 10 mK mixing chamber) to learn about its role and constituent materials.
@@ -79,10 +83,12 @@ src/
     QuantumStructure.js # View switcher (Fridge / QPU tabs)
     MaterialsList.js   # Searchable material card grid
     MaterialsChart.js  # Bar, category, and pie charts
+    CostEstimate.js    # Raw materials cost breakdown
     WorldMap.js        # Supply chain map with country data
     ThemeToggle.js     # Dark/light mode toggle
   data/
     materials.js       # 24 materials with properties and sourcing
+    materialPrices.js  # Static commodity prices and cost helpers
     fridgeComponents.js # 6 fridge stages with temp ranges
   App.js               # Root layout and section navigation
 ```
