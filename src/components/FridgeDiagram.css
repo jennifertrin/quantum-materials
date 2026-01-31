@@ -33,13 +33,13 @@
   justify-content: center;
   color: var(--text-tertiary);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 /* === 3D HTML Labels === */
 .temp-label-3d {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--svg-fridge-temp-text);
   background: var(--svg-fridge-temp-bg);
@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--svg-label-text);
   background: var(--svg-label-bg);
@@ -102,14 +102,14 @@
   border-radius: var(--radius-sm);
   padding: 6px 12px;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--svg-fridge-temp-text);
   margin-bottom: 16px;
 }
 
 .temperature-badge .temp-label {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 400;
   color: var(--text-tertiary);
   text-transform: uppercase;
@@ -134,8 +134,8 @@
   border: none;
   border-radius: var(--radius-md);
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
   transition: opacity 0.15s ease, transform 0.15s ease;
 }
@@ -172,11 +172,10 @@
   border-radius: var(--radius-sm);
   padding: 6px 12px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-tertiary);
   pointer-events: none;
   user-select: none;
-  opacity: 0.85;
   animation: hintFade 4s ease-out forwards;
 }
 
@@ -186,7 +185,7 @@
 }
 
 @keyframes hintFade {
-  0%, 70% { opacity: 0.85; }
+  0%, 70% { opacity: 1; }
   100% { opacity: 0; }
 }
 

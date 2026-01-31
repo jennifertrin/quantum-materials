@@ -24,7 +24,7 @@
   background: transparent;
   color: var(--text-secondary);
   cursor: pointer;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-family: var(--font-mono);
   font-weight: 400;
   transition: background 0.15s ease, color 0.15s ease;
@@ -42,7 +42,7 @@
 /* === Chart titles === */
 .chart-content h3 {
   color: var(--text-tertiary);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -85,15 +85,15 @@
 
 .bar-rank {
   color: var(--text-tertiary);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-family: var(--font-mono);
   width: 22px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .bar-name {
   color: var(--text-primary);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -120,7 +120,7 @@
 
 .bar-value {
   color: var(--chart-bar-text);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-family: var(--font-mono);
   font-weight: 500;
 }
@@ -159,12 +159,12 @@
 
 .category-name {
   color: var(--text-primary);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
 }
 
 .category-count {
   color: var(--text-tertiary);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   font-family: var(--font-mono);
 }
 
@@ -186,7 +186,7 @@
   width: 50px;
   text-align: right;
   color: var(--text-secondary);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-family: var(--font-mono);
   font-weight: 400;
 }
@@ -239,13 +239,13 @@
 
 .pie-legend .legend-name {
   color: var(--text-secondary);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   min-width: 130px;
 }
 
 .pie-legend .legend-value {
   color: var(--text-primary);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-family: var(--font-mono);
   font-weight: 400;
 }
@@ -261,7 +261,7 @@
   }
 
   .bar-name {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .category-info {
@@ -281,6 +281,6 @@
     flex: 1;
     text-align: center;
     padding: 7px 10px;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }

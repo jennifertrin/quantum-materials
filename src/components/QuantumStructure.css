@@ -12,7 +12,7 @@
   background: transparent;
   border: none;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   color: var(--text-tertiary);
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;

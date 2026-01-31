@@ -9,7 +9,7 @@
 
   --text-primary: #d4d4d8;
   --text-secondary: #82858c;
-  --text-tertiary: #52555c;
+  --text-tertiary: #7a7e86;
   --text-heading: #e8e8ec;
 
   --accent: #c8956c;
@@ -94,7 +94,7 @@
   /* Chart */
   --chart-pie-stroke: #141618;
   --chart-pie-center: #141618;
-  --chart-pie-label: #52555c;
+  --chart-pie-label: #7a7e86;
   --chart-pie-value: #d4d4d8;
   --chart-bar-text: #fff;
 
@@ -107,8 +107,8 @@
   /* Popup */
   --shadow-popup: 0 16px 48px rgba(0, 0, 0, 0.5);
 
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-display: 'Atkinson Hyperlegible', system-ui, sans-serif;
   --font-mono: 'DM Mono', 'SF Mono', 'Consolas', monospace;
 
   --radius-sm: 3px;
@@ -128,7 +128,7 @@
 
   --text-primary: #2c2a28;
   --text-secondary: #6b6862;
-  --text-tertiary: #9c9890;
+  --text-tertiary: #76726b;
   --text-heading: #1a1816;
 
   --accent: #a06832;
@@ -213,7 +213,7 @@
   /* Chart */
   --chart-pie-stroke: #ffffff;
   --chart-pie-center: #ffffff;
-  --chart-pie-label: #9c9890;
+  --chart-pie-label: #76726b;
   --chart-pie-value: #2c2a28;
   --chart-bar-text: #fff;
 
