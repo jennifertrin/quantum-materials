@@ -108,7 +108,7 @@ function MaterialsList({ initialSearch = '' }) {
                 ></div>
               </div>
               <div className="percentage-stats">
-                <span className="percentage-text">{material.chipPercentage}% of QPU</span>
+                <span className="percentage-text">{material.chipPercentage}% of system</span>
                 {material.approximateMass && (
                   <span className="mass-text">{material.approximateMass}</span>
                 )}

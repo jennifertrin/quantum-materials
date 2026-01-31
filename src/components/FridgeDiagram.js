@@ -118,7 +118,7 @@ function FridgeDiagram({ onDrillDown }) {
               <div className="material-stats">
                 <div className="stat-item">
                   <span className="stat-value">{selectedMaterial.chipPercentage}%</span>
-                  <span className="stat-label">of QPU</span>
+                  <span className="stat-label">of system</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-value">{selectedMaterial.category}</span>

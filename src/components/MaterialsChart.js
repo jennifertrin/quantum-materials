@@ -89,7 +89,7 @@ function MaterialsChart({ materials, onMaterialClick }) {
       <div className="chart-content">
         {activeChart === 'composition' && (
           <div className="bar-chart">
-            <h3>Top 10 Materials by QPU Composition</h3>
+            <h3>Top 10 Materials by System Composition</h3>
             {topMaterials.map((mat, index) => (
               <div
                 key={mat.id}
