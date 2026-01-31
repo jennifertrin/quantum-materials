@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function getInitialTheme() {
   const stored = localStorage.getItem('theme');
   if (stored === 'light' || stored === 'dark') return stored;
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  return 'light';
 }
 
 function ThemeToggle() {
