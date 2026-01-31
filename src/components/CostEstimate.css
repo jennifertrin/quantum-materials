@@ -1,0 +1,230 @@
+/* === Section header override — no border for this section === */
+.cost-section .section-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 16px;
+}
+
+/* === Cost Estimate Container === */
+.cost-estimate-container {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+/* === Summary === */
+.cost-summary {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cost-summary-value {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--text-heading);
+  margin: 0;
+  line-height: 1;
+}
+
+.cost-summary-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin: 0 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cost-summary-meta .meta-sep {
+  color: var(--border);
+}
+
+/* === Context note === */
+.cost-context {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin: 0 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cost-context strong {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* === Toggle button === */
+.cost-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  transition: color 0.15s ease;
+  border-radius: var(--radius-sm);
+}
+
+.cost-toggle:hover {
+  color: var(--text-heading);
+}
+
+.cost-toggle-icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.cost-toggle-icon-open {
+  transform: rotate(90deg);
+}
+
+.cost-toggle-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  background: var(--bg-surface);
+  padding: 1px 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* === Table === */
+.cost-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 4px;
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.cost-table th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  text-align: left;
+  padding: 0 12px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.cost-table th.align-right {
+  text-align: right;
+}
+
+.cost-table td {
+  padding: 10px 12px;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.cost-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cost-table tbody tr {
+  transition: background 0.1s ease;
+}
+
+.cost-table tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+/* Material cell */
+.cost-material-name {
+  font-weight: 400;
+}
+
+.cost-material-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+/* Numeric cells */
+.cost-table td.mono {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Source cell */
+.cost-source-cell {
+  font-size: 0.75rem !important;
+  color: var(--text-tertiary) !important;
+}
+
+/* === Disclaimer === */
+.cost-disclaimer {
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  font-family: var(--font-mono);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .cost-estimate-container {
+    padding: 16px;
+  }
+
+  .cost-summary {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cost-summary-value {
+    font-size: 2.25rem;
+  }
+
+  .cost-summary-meta {
+    margin-left: 0;
+  }
+
+  .cost-summary-meta .meta-sep {
+    display: none;
+  }
+
+  .cost-table {
+    font-size: 0.875rem;
+  }
+
+  .cost-table th {
+    font-size: 0.6875rem;
+  }
+
+  .cost-table td {
+    padding: 8px 10px;
+    font-size: 0.875rem;
+  }
+
+  .cost-table td.mono {
+    font-size: 0.8125rem;
+  }
+}

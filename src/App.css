@@ -7,7 +7,7 @@
 
 /* --- Header --- */
 .header {
-  margin-bottom: 80px;
+  margin-bottom: 48px;
 }
 
 .header-content {
@@ -64,7 +64,7 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 48px;
 }
 
 /* --- Sections --- */
@@ -129,7 +129,7 @@
   }
 
   .main-content {
-    gap: 56px;
+    gap: 36px;
   }
 
   .section-header {

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import MaterialsList from './components/MaterialsList';
 import QuantumStructure from './components/QuantumStructure';
 import MaterialsChart from './components/MaterialsChart';
+import CostEstimate from './components/CostEstimate';
 import ThemeToggle from './components/ThemeToggle';
 import { quantumMaterials } from './data/materials';
 import './App.css';
@@ -30,6 +31,14 @@ function App() {
       </header>
 
       <main className="main-content">
+        <section className="section cost-section">
+          <div className="section-header">
+            <h2>Raw Materials Cost</h2>
+            <p>Estimated cost breakdown based on commodity prices</p>
+          </div>
+          <CostEstimate />
+        </section>
+
         <section className="section qpu-section">
           <div className="section-header">
             <h2>Quantum Computer Structure</h2>
